@@ -1,0 +1,189 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 14px;
+}
+
+.u-text-primary {
+  color: var(--var-color-primary);
+}
+
+:root {
+  --var-color-primary: #56ccf2;
+  --var-color-secondary: #0a2d5c;
+  --var-color-tertiary: #11315e;
+  --var-color-text-alpha: #9bbeec;
+  --var-title-size: 32px;
+}
+
+.App-header__title {
+  font-weight: 600;
+  font-size: var(--var-title-size);
+  color: var(--var-color-text-alpha);
+  text-align: center;
+  padding: 24px 0;
+}
+
+body {
+  background-color: var(--var-color-secondary);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.Fixtures {
+  border-radius: 9px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Fixture {
+  margin-bottom: 3rem;
+  padding: 3em 8em;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+  background: var(--var-color-tertiary);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.Fixture__teams {
+  display: flex;
+  align-items: center;
+}
+
+.Fixture__separator,
+.Fixture__controls__separator {
+  padding: 0 3rem;
+  font-size: 2rem;
+  color: var(--var-color-text-alpha);
+  font-weight: bold;
+}
+
+.Fixture__controls__separator {
+  position: relative;
+  top: 1.5rem;
+}
+
+.Fixture__control {
+  width: 16em;
+}
+
+.Fixture__controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.Fixture__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Fixture__status {
+  display: flex;
+  align-items: center;
+  /* background: var(--var-color-secondary); */
+  color: var(--var-color-text-alpha);
+  padding: 0.5rem 2rem;
+  font-weight: bolder;
+  border: 1px solid var(--var-color-text-alpha);
+  border-radius: 16px;
+}
+
+.Fixture__status__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 100%;
+  margin-right: 1rem;
+  background: var(--var-color-primary);
+}
+
+.Team {
+  position: relative;
+  background: var(--var-color-secondary);
+  border: 1px solid var(--var-color-secondary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 16em;
+  height: 16em;
+  border-radius: 9px;
+}
+
+.Team--selected {
+  border-color: var(--var-color-primary);
+}
+
+.Team__name {
+  font-size: 1rem;
+  color: var(--var-color-text-alpha);
+  font-weight: 800;
+}
+
+.Team__logo {
+  width: 96px;
+  height: 96px;
+}
+
+.Team__radio {
+  opacity: 0;
+}
+
+.Team__tick {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.Team__radio:checked + .Team,
+.Team__radio:focus + .Team {
+  border-color: var(--var-color-primary);
+}
+
+/* .FormInput {
+} */
+
+.FormInput__label {
+  color: var(--var-color-primary);
+  font-weight: 700;
+  display: block;
+  padding: 1rem 0;
+}
+
+.FormInput__control {
+  background: var(--var-color-secondary);
+  color: #fff;
+  border: none;
+  font-weight: 700;
+  font-size: 16px;
+  display: block;
+  width: 100%;
+  padding: 1rem;
+}
+
+.FormInput__control:focus {
+  outline: 0.5px solid var(--var-color-text-alpha);
+}
+
+.Button {
+  background: var(--var-color-primary);
+  color: var(--var-color-secondary);
+  font-weight: 600;
+  border: 1px solid var(--var-color-primary);
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
